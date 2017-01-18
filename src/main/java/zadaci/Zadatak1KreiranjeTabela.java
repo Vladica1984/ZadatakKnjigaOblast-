@@ -1,5 +1,11 @@
 package zadaci;
 
+import com.j256.ormlite.jdbc.JdbcConnectionSource;
+import com.j256.ormlite.support.ConnectionSource;
+import com.j256.ormlite.table.TableUtils;
+import model.Knjiga;
+import model.Oblast;
+
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -19,6 +25,7 @@ public class Zadatak1KreiranjeTabela {
 
             TableUtils.createTable(connectionSource, Knjiga.class);
             TableUtils.createTable(connectionSource, Oblast.class);
+
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
